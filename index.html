@@ -1,77 +1,127 @@
 <!doctype html>
 <html lang="id">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Siti Awangsih — Portfolio</title>
+<meta name="description" content="Portfolio Siti Awangsih — TJKT, networking, digital projects, dan Canva design.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--n:#071426;--b:#1677ff;--y:#ffd21f;--w:#f6f9ff;--m:#9db0c9}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--n);color:var(--w);font-family:Arial,sans-serif}
-nav{position:fixed;top:0;width:100%;z-index:5;background:#071426dd;backdrop-filter:blur(12px);border-bottom:1px solid #203652}
-.nav{max-width:1100px;margin:auto;height:70px;display:flex;justify-content:space-between;align-items:center;padding:0 20px}.logo{font-size:21px;font-weight:800}.logo span{color:var(--b)}.logo i{color:var(--y);font-style:normal;margin-left:8px}
-.nav a{color:#aabbd0;text-decoration:none;margin-left:20px;font-size:13px}.nav a:hover{color:white}
-.wrap{max-width:1100px;margin:auto;padding:0 20px}section{padding:110px 0}
-.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;padding-top:90px}.k{color:var(--y);letter-spacing:4px;font-size:12px;font-weight:bold}
-h1{font-size:clamp(60px,10vw,130px);line-height:.82;letter-spacing:-7px;margin:25px 0}h1 span{color:transparent;-webkit-text-stroke:2px #55a5ff}
-p{color:var(--m);line-height:1.7}.btn{display:inline-block;margin-top:20px;padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:bold}.primary{background:var(--y);color:#071426}.secondary{border:1px solid #29435f;color:white;margin-left:8px}
-.photo{width:min(400px,90%);aspect-ratio:4/5;margin:auto;border-radius:25px;overflow:hidden;transform:rotate(2deg);border:1px solid #29435f;box-shadow:18px 18px 0 var(--b)}.photo img{width:100%;height:100%;object-fit:cover;object-position:top}
-.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.card{background:#0b1b31;border:1px solid #203652;border-radius:18px;padding:23px;transition:.3s}.card:hover{transform:translateY(-7px);border-color:var(--b)}
-.about{display:grid;grid-template-columns:1.3fr .7fr;gap:14px}.skill .ico{font-size:28px;display:block;margin-bottom:30px}
-.projects{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.num{color:var(--y);font-size:35px;font-weight:bold}.tags{margin-top:15px;color:#a9d0ff;font-size:12px}
-.timeline{display:grid;grid-template-columns:130px 1fr;gap:25px}.year{color:var(--y);font-size:30px;font-weight:bold}
-.contact{background:linear-gradient(115deg,#0d55bd,#147dff);border-radius:26px;padding:55px;position:relative;overflow:hidden}.contact h2{font-size:clamp(50px,8vw,100px);margin:15px 0}.contact h2 span{color:var(--y)}
-.icons{display:flex;gap:15px;margin-top:28px}.icon{width:65px;height:65px;border-radius:50%;border:1px solid #ffffff66;background:#07142666;color:white;display:grid;place-items:center;cursor:pointer;transition:.3s}.icon svg{width:27px;height:27px;fill:none;stroke:currentColor;stroke-width:1.8}.icon:hover{transform:translateY(-8px) rotate(-5deg);color:var(--y)}
-footer{padding:30px 20px;color:#8da1b8;display:flex;justify-content:space-between;font-size:12px}
-.overlay{position:fixed;inset:0;background:#020914aa;backdrop-filter:blur(7px);z-index:20;display:grid;place-items:center;opacity:0;visibility:hidden;transition:.25s}.overlay.show{opacity:1;visibility:visible}.popup{width:min(380px,90%);background:#0b1b31;border:1px solid #315071;border-radius:20px;padding:32px;text-align:center;position:relative;transform:scale(.92);transition:.25s}.overlay.show .popup{transform:scale(1)}.close{position:absolute;right:14px;top:8px;background:none;border:0;color:#9db0c9;font-size:28px;cursor:pointer}.popup .bigico{font-size:35px;color:var(--y)}.popup h3{font-size:24px;margin:12px}.popup a{display:inline-block;background:var(--y);color:#071426;padding:11px 18px;border-radius:9px;text-decoration:none;font-weight:bold}
-.reveal{opacity:0;transform:translateY(30px);transition:.7s}.reveal.show{opacity:1;transform:none}
-@media(max-width:800px){.navlinks{display:none}.hero,.about{grid-template-columns:1fr}.hero-visual{order:-1}.grid{grid-template-columns:repeat(2,1fr)}.projects{grid-template-columns:1fr}.contact{padding:35px 25px}.timeline{grid-template-columns:1fr}}
-@media(max-width:500px){.grid{grid-template-columns:1fr}h1{font-size:65px}}
+:root{--blue:#1769e0;--navy:#102a43;--yellow:#ffd84d;--cream:#f8f6ef}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--navy);font-family:"DM Sans",sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;width:360px;height:360px;border-radius:50%;background:#dce9ff;filter:blur(70px);right:-160px;top:-160px;z-index:-1}
+.wrap{max-width:1180px;margin:auto;padding:0 5vw}
+nav{height:82px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:10;background:#f8f6efdd;backdrop-filter:blur(14px)}
+.logo{font:700 26px "Space Grotesk"}.logo i{color:var(--blue)}
+nav a{text-decoration:none;font-size:11px;font-weight:700;letter-spacing:1.5px;margin-left:24px}
+.hero{min-height:calc(100vh - 82px);display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:45px}
+.eyebrow{font-size:11px;font-weight:700;letter-spacing:3px;color:var(--blue)}
+h1,h2,h3{font-family:"Space Grotesk";margin-top:0}
+h1{font-size:clamp(64px,9vw,118px);line-height:.82;letter-spacing:-7px;margin:25px 0}
+h1 span{color:var(--blue)}.hero p{font-size:19px;line-height:1.7;max-width:650px}
+.btn{display:inline-block;background:var(--navy);color:white;text-decoration:none;padding:14px 20px;border-radius:28px;font-size:11px;font-weight:700;letter-spacing:1px;margin-top:12px;transition:.25s}
+.btn:hover{background:var(--blue);transform:translateY(-4px)}
+.portrait{position:relative;width:min(410px,100%);margin:auto}
+.portrait img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:38px 38px 105px 38px;box-shadow:24px 24px 0 var(--yellow);transform:rotate(2deg)}
+.section{padding:105px 0}.section h2{font-size:clamp(46px,6vw,76px);line-height:.95;letter-spacing:-4px;margin:15px 0 42px}
+.about{display:grid;grid-template-columns:.7fr 1.3fr;gap:65px}.about p{font-size:20px;line-height:1.8}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:14px}.card{background:white;border:1px solid #102a4320;border-radius:24px;padding:24px}
+.card b{display:block;color:var(--blue);font-size:10px;letter-spacing:2px;margin-bottom:8px}
+.skills{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.skill{background:var(--navy);color:#fff;border-radius:22px;padding:23px;transition:.25s}
+.skill:hover{transform:translateY(-7px) rotate(-1deg);background:var(--blue)}
+.skill small{display:block;color:#dce8ff;line-height:1.5;margin-top:8px}
+.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.project{background:white;border:1px solid #102a4320;border-radius:24px;padding:27px;min-height:205px;transition:.25s}
+.project:hover{transform:translateY(-7px);box-shadow:0 22px 55px #102a4320}
+.project:nth-child(2),.project:nth-child(4){background:var(--yellow)}
+.num{font-size:11px;color:var(--blue);font-weight:700;letter-spacing:1px}
+.project h3{font-size:28px;margin:12px 0}.project p{line-height:1.6}
+.tag{display:inline-block;background:#eaf0ff;color:var(--blue);border-radius:20px;padding:6px 10px;font-size:10px;margin:3px}
+.experience{display:grid;grid-template-columns:150px 1fr;gap:35px}.year{font:700 38px "Space Grotesk";color:var(--blue)}
+.contact{background:var(--blue);color:white;border-radius:36px;padding:55px}.contact .eyebrow{color:var(--yellow)}
+.contact h2{font-size:clamp(52px,7vw,84px);margin:14px 0}.contact a{font-weight:700;text-decoration:none;margin-right:25px}
+footer{display:flex;justify-content:space-between;padding:35px 0;font-size:12px}
+@media(max-width:800px){nav a{display:none}.hero,.about{grid-template-columns:1fr}.hero{padding:60px 0}.visual{order:-1}.skills{grid-template-columns:1fr 1fr}.projects{grid-template-columns:1fr}.experience{grid-template-columns:1fr}.facts{grid-template-columns:1fr}.section{padding:75px 0}}
+@media(max-width:470px){.skills{grid-template-columns:1fr}h1{letter-spacing:-4px}}
 </style>
 </head>
 <body>
-<nav><div class="nav"><div class="logo">SITI <span>AWANGSIH</span><i>//</i></div><div class="navlinks"><a href="#about">Tentang</a><a href="#skills">Skills</a><a href="#projects">Project</a><a href="#experience">Pengalaman</a><a href="#contact">Kontak</a></div></div></nav>
+<div class="wrap">
+<nav>
+<div class="logo">SITI<i>.</i></div>
+<div><a href="#about">ABOUT</a><a href="#skills">SKILLS</a><a href="#projects">PROJECTS</a><a href="#experience">EXPERIENCE</a><a href="#contact">CONTACT</a></div>
+</nav>
 
-<header class="wrap hero" id="home">
-<div class="reveal"><div class="k">PERSONAL PORTFOLIO • 2026</div><h1>SITI<br><span>AWANGSIH</span></h1><p>Pelajar Teknik Jaringan Komputer dan Telekomunikasi yang tertarik pada networking, aplikasi digital, desain, dan pengembangan project.</p><a class="btn primary" href="#projects">Lihat Project →</a><a class="btn secondary" href="#about">Tentang Saya</a></div>
-<div class="hero-visual reveal"><div class="photo"><img src="profile.jpg" alt="Siti Awangsih"></div></div>
-</header>
+<section class="hero">
+<div>
+<div class="eyebrow">PERSONAL PORTFOLIO / 2026</div>
+<h1>SITI<br><span>AWANGSIH</span></h1>
+<p>Pelajar <b>Teknik Jaringan Komputer dan Telekomunikasi (TJKT)</b> yang tertarik pada networking, aplikasi digital, desain, dan pengembangan project.</p>
+<a class="btn" href="#projects">LIHAT PROJECT ↗</a>
+</div>
+<div class="portrait">
+<img src="profile.jpg" alt="Foto Siti Awangsih">
+</div>
+</section>
 
-<section id="about"><div class="wrap"><div class="k">01 — ABOUT ME</div><h2>Mengenal saya lebih dekat.</h2><div class="about"><div class="card reveal"><p style="font-size:18px">Saya <b style="color:#ffd21f">Siti Awangsih</b>, siswi Teknik Jaringan Komputer dan Telekomunikasi (TJKT) di SMK Negeri 1 Klari. Saya tertarik pada teknologi, jaringan komputer, aplikasi digital, dan desain. Saya senang belajar melalui praktik, mencoba hal baru, menemukan solusi, dan mengubah ide menjadi sesuatu yang nyata.</p></div><div class="card reveal"><p><b>JURUSAN</b><br>TJKT</p><p><b>FOKUS</b><br>Networking & Digital Project</p></div></div></div></section>
+<section id="about" class="section">
+<div class="eyebrow">01 — ABOUT ME</div>
+<div class="about">
+<div><h2>Belajar.<br>Mencoba.<br>Membuat.</h2></div>
+<div>
+<p>Saya Siti Awangsih, siswi TJKT di SMK Negeri 1 Klari. Saya senang belajar melalui praktik, mencoba teknologi baru, dan mengubah ide sederhana menjadi sesuatu yang bermanfaat.</p>
+<div class="facts">
+<div class="card"><b>FOCUS</b>Technology & Digital Project</div>
+<div class="card"><b>EDUCATION</b>SMK Negeri 1 Klari</div>
+</div>
+</div>
+</div>
+</section>
 
-<section id="skills"><div class="wrap"><div class="k">02 — SKILLS</div><h2>Tools yang saya gunakan.</h2><div class="grid">
-<div class="card skill reveal"><span class="ico">🌐</span><b>Networking</b></div><div class="card skill reveal"><span class="ico">📡</span><b>MikroTik</b></div><div class="card skill reveal"><span class="ico">🔌</span><b>Cisco Packet Tracer</b></div><div class="card skill reveal"><span class="ico">📱</span><b>AppSheet</b></div><div class="card skill reveal"><span class="ico">📊</span><b>Google Sheets</b></div><div class="card skill reveal"><span class="ico">📈</span><b>Microsoft Excel</b></div><div class="card skill reveal"><span class="ico">📝</span><b>Microsoft Word</b></div><div class="card skill reveal"><span class="ico">🎨</span><b>Canva</b></div>
-</div></div></section>
+<section id="skills" class="section">
+<div class="eyebrow">02 — SKILLS</div><h2>Tools yang saya gunakan.</h2>
+<div class="skills">
+<div class="skill">🌐 <strong>Networking</strong><small>IP • Subnetting • Troubleshooting</small></div>
+<div class="skill">📡 <strong>MikroTik</strong><small>DHCP • DNS • Firewall dasar</small></div>
+<div class="skill">🔌 <strong>Cisco Packet Tracer</strong><small>Simulasi jaringan</small></div>
+<div class="skill">📱 <strong>AppSheet</strong><small>App & automation</small></div>
+<div class="skill">📊 <strong>Google Sheets</strong><small>Data & database</small></div>
+<div class="skill">📈 <strong>Microsoft Excel</strong><small>Pengolahan data</small></div>
+<div class="skill">📝 <strong>Microsoft Word</strong><small>Dokumen & administrasi</small></div>
+<div class="skill">🎨 <strong>Canva</strong><small>Desain visual & branding</small></div>
+</div>
+</section>
 
-<section id="projects"><div class="wrap"><div class="k">03 — SELECTED PROJECTS</div><h2>Yang pernah saya buat.</h2><div class="projects">
-<article class="card reveal"><div class="num">01</div><h3>ABSENSI PKL</h3><p>Aplikasi untuk pencatatan kehadiran dan monitoring kegiatan PKL.</p><div class="tags">AppSheet • Google Sheets</div></article>
-<article class="card reveal"><div class="num">02</div><h3>SURAT JALAN</h3><p>Aplikasi untuk membantu pengelolaan dan pengecekan data surat jalan.</p><div class="tags">AppSheet • Database</div></article>
-<article class="card reveal"><div class="num">03</div><h3>PERSONAL PORTFOLIO</h3><p>Website personal untuk menampilkan karya dan perjalanan belajar.</p><div class="tags">HTML • CSS</div></article>
-<article class="card reveal"><div class="num">04</div><h3>DESIGN & CREATIVE</h3><p>Berbagai project desain digital untuk kebutuhan visual dan komunikasi.</p><div class="tags">Canva • Graphic Design</div></article>
-<article class="card reveal"><div class="num">05</div><h3>NETWORKING PROJECT</h3><p>Simulasi dan praktik konfigurasi jaringan untuk memahami networking.</p><div class="tags">Cisco • MikroTik</div></article>
-</div></div></section>
+<section id="projects" class="section">
+<div class="eyebrow">03 — PROJECTS</div><h2>Yang pernah saya buat.</h2>
+<div class="projects">
+<article class="project"><div class="num">01 / APP</div><h3>ABSENSI PKL</h3><p>Aplikasi untuk pencatatan kehadiran dan monitoring kegiatan PKL.</p><span class="tag">AppSheet</span><span class="tag">Google Sheets</span></article>
+<article class="project"><div class="num">02 / APP</div><h3>SURAT JALAN</h3><p>Aplikasi untuk membantu pengelolaan dan pengecekan data surat jalan.</p><span class="tag">AppSheet</span><span class="tag">Database</span></article>
+<article class="project"><div class="num">03 / WEB</div><h3>PERSONAL PORTFOLIO</h3><p>Website personal untuk menampilkan karya dan perjalanan belajar.</p><span class="tag">HTML</span><span class="tag">CSS</span></article>
+<article class="project"><div class="num">04 / DESIGN</div><h3>CANVA DESIGN</h3><p>Project desain visual untuk kebutuhan personal branding dan komunikasi digital.</p><span class="tag">Canva</span><span class="tag">Graphic Design</span></article>
+</div>
+</section>
 
-<section id="experience"><div class="wrap"><div class="k">04 — EXPERIENCE</div><h2>Pengalaman di dunia kerja.</h2><div class="card timeline reveal"><div class="year">2026</div><div><h3>Praktik Kerja Lapangan</h3><b>PT. Reka Guna Mulya</b><p>Memperoleh pengalaman langsung di lingkungan kerja serta menerapkan kemampuan teknologi, administrasi, dan pengembangan project digital.</p></div></div></div></section>
+<section id="experience" class="section">
+<div class="eyebrow">04 — EXPERIENCE</div><h2>Pengalaman.</h2>
+<div class="experience"><div class="year">2026</div><div class="card"><h3>Praktik Kerja Lapangan</h3><b>PT. Reka Guna Mulya</b><p>Memperoleh pengalaman langsung di lingkungan kerja serta menerapkan kemampuan teknologi, administrasi, dan project digital.</p></div></div>
+</section>
 
-<section id="education"><div class="wrap"><div class="k">05 — EDUCATION</div><h2>Perjalanan pendidikan.</h2><div class="card reveal"><h3>SMK NEGERI 1 KLARI</h3><b>Teknik Jaringan Komputer dan Telekomunikasi (TJKT)</b><p>Belajar mengenai jaringan komputer, perangkat jaringan, troubleshooting, aplikasi digital, dan berbagai project teknologi.</p></div></div></section>
+<section class="section">
+<div class="eyebrow">05 — EDUCATION</div><h2>Pendidikan.</h2>
+<div class="card"><h3>SMK NEGERI 1 KLARI</h3><p>Teknik Jaringan Komputer dan Telekomunikasi (TJKT)</p></div>
+</section>
 
-<section id="contact"><div class="wrap"><div class="contact reveal"><div class="k">06 — CONTACT</div><h2>Let’s <span>connect.</span></h2><p>Saya terbuka untuk berdiskusi, berbagi project, atau berkenalan dengan orang-orang yang tertarik pada teknologi dan dunia digital.</p><div class="icons">
-<button class="icon" onclick="openContact('ig')" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></button>
-<button class="icon" onclick="openContact('mail')" aria-label="Gmail"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></button>
-</div><p style="font-size:13px;color:#e7f0ff">Klik icon untuk membuka kontak →</p></div></div></section>
+<section id="contact" class="section">
+<div class="contact"><div class="eyebrow">06 — CONTACT</div><h2>Let's connect.</h2><p>Instagram • GitHub • Email</p>
+<a href="#">@username</a><a href="#">github.com/username</a><a href="mailto:your@email.com">your@email.com</a>
+</div>
+</section>
 
-<footer class="wrap"><span>SITI AWANGSIH</span><span>TJKT • Creative Tech • Digital Projects</span><span>© 2026</span></footer>
-
-<div class="overlay" id="overlay" onclick="if(event.target===this)closeContact()"><div class="popup"><button class="close" onclick="closeContact()">×</button><div class="bigico" id="pi"></div><h3 id="pt"></h3><p id="px"></p><a id="pb" target="_blank"></a></div></div>
-
-<script>
-function openContact(t){
- const o=document.getElementById('overlay'),i=document.getElementById('pi'),title=document.getElementById('pt'),x=document.getElementById('px'),b=document.getElementById('pb');
- if(t==='ig'){i.textContent='◎';title.textContent='Instagram';x.textContent='@awgg_7';b.textContent='Buka Instagram ↗';b.href='https://www.instagram.com/awgg_7/';}
- else{i.textContent='✉';title.textContent='Gmail';x.textContent='sitiawangsih177@gmail.com';b.textContent='Kirim Email ↗';b.href='mailto:sitiawangsih177@gmail.com';}
- o.classList.add('show');document.body.style.overflow='hidden';
-}
-function closeContact(){document.getElementById('overlay').classList.remove('show');document.body.style.overflow='';}
-document.addEventListener('keydown',e=>{if(e.key==='Escape')closeContact()});
-const ob=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');ob.unobserve(e.target)}}),{threshold:.12});
-document.querySelectorAll('.reveal').forEach(e=>ob.observe(e));
-</script>
-</body></html>
+<footer><b>SITI AWANGSIH</b><span>Technology • Projects • Journey</span><span>© 2026</span></footer>
+</div>
+</body>
+</html>
